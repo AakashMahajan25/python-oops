@@ -3,7 +3,7 @@ class Car:
 
     def __init__(self, brand, model):
         self.__brand = brand
-        self.model = model
+        self.__model = model
         Car.total_car += 1
         # self.total_car += 1  //Can do this too
 
@@ -11,7 +11,7 @@ class Car:
         return self.__brand + " !"
     
     def full_name(self):
-        return f"{self.__brand} {self.model}"
+        return f"{self.__brand} {self.__model}"
     
     def fuel_type(self):
         return "Petrol or Diesel"
@@ -19,6 +19,10 @@ class Car:
     @staticmethod
     def general_description():
         return "Cars are a means of transport"
+    
+    @property
+    def model(self):
+        return self.__model
 
 class ElectricCar(Car):
     def __init__(self, brand, model, battery_size):
@@ -36,6 +40,7 @@ tesla = ElectricCar("Tesla", "Model S", "85kWH")
 
 
 my_car = Car("Toyota", "Corolla")
+
 
 
 # my_new_car = Car("Tata", "Harrier")
