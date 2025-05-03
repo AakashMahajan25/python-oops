@@ -34,7 +34,7 @@ class ElectricCar(Car):
     
 
 
-print(Car.general_description())
+# print(Car.general_description())
 
 tesla = ElectricCar("Tesla", "Model S", "85kWH")
 
@@ -46,4 +46,8 @@ my_car = Car("Toyota", "Corolla")
 # my_new_car = Car("Tata", "Harrier")
 # print(my_new_car.model)
 
-print(Car.total_car)
+# print(Car.total_car)
+
+
+print(isinstance(tesla, Car))
+print(isinstance(tesla, ElectricCar))
