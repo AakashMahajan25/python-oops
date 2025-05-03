@@ -49,5 +49,22 @@ my_car = Car("Toyota", "Corolla")
 # print(Car.total_car)
 
 
-print(isinstance(tesla, Car))
-print(isinstance(tesla, ElectricCar))
+# print(isinstance(tesla, Car))
+# print(isinstance(tesla, ElectricCar))
+
+
+class Battery:
+    def battery_info(self):
+        return "This is battery"
+
+class Engine:
+    def engine_info(self):
+        return "This is Engine"
+
+class ElectricCarTwo(Battery, Engine, Car):
+    pass
+
+my_new_tesla = ElectricCarTwo("Tesla", "Model S")
+
+print(my_new_tesla.battery_info())
+print(my_new_tesla.engine_info())
